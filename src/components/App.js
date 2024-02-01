@@ -9,7 +9,9 @@ const App = () => {
     }
     if (typeof data === "string") {
       if (data.includes("#")) {
-        setData(<h1> {data.split("#").join("")}</h1>);
+        setData(
+          <p style={{ fontWeight: "bold" }}> {data.split("#").join("")}</p>
+        );
       }
     }
   }, [data]);
