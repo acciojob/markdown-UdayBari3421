@@ -10,18 +10,21 @@ const App = () => {
     if (typeof data === "string") {
       if (data.includes("#")) {
         setData(
-          <p style={{ fontWeight: "bold" }}> {data.split("#").join("")}</p>
+          <h1 style={{ fontWeight: "bold" }}> {data.split("#").join("")}</h1>
         );
       }
     }
   }, [data]);
+
   return (
     <div className="app">
       <textarea
         className="textarea"
         onChange={(e) => setData(e.target.value)}
       ></textarea>
-      <div className="preview">{data}</div>
+      <div className="preview">
+        <p>{data}</p>
+      </div>
     </div>
   );
 };
