@@ -14,7 +14,7 @@ const App = () => {
         className="textarea"
         onChange={(e) => setData(e.target.value)}
       ></textarea>
-      <div className="preview" style={style}>
+      <div className="preview">
         <h1>{data}</h1>
       </div>
     </div>
